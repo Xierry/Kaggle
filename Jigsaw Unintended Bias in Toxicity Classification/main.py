@@ -96,7 +96,7 @@ test_preds  = np.zeros((len(test_x)))
 models={} # 存储模型参数
 model = NeuralNet(embedding_matrix).to(device)
 
-ema_model = copy.deepcopy(model) # 深拷贝一份模型
+ema_model = copy.deepcopy(model) 
 ema_model.eval()                 # 设置成验证模式
 ema = EMA(model, n=int(len(train_loader.dataset) / (10 * batch_size))) # 指数移动平均
 
@@ -115,7 +115,7 @@ for epoch in range(train_epochs):
 
     for _, x_batch, y_batch in train_loader:
         x_batch = x_batch.to(device)
-        y_batch = y_batch.to(device)        # print('x_batch: ', x_batch.size())
+        y_batch = y_batch.to(device)
 
         scheduler.batch_step()
 
