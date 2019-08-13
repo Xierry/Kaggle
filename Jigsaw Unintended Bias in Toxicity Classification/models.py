@@ -1,6 +1,6 @@
-import numpy as np
+import numpy as np, torch
 from sklearn.utils import shuffle
-from torch import nn , torch
+from torch import nn
 from torch.utils.data import Dataset, Sampler, DataLoader
 from torch.optim.optimizer import Optimizer
 
