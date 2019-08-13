@@ -4,7 +4,6 @@ from torch import nn
 from torch.utils.data import Dataset, Sampler, DataLoader
 from torch.optim.optimizer import Optimizer
 
-
 class NeuralNet(nn.Module):
     def __init__(self, embedding, lstm_hidden_size = 120, gru_hidden_size = 60, p=0.2):
         super(NeuralNet, self).__init__()
